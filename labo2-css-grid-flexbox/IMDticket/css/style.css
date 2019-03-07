@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    font: sans-serif;
+}
+
+.grid{
+    width: 920px;
+    height: 320px;
+    display: grid;
+}
