@@ -1,10 +1,81 @@
 *{
     box-sizing: border-box;
-    font: sans-serif;
+    font-family: sans-serif;
+}
+
+div{
+    border: 1px solid black;
 }
 
 .grid{
-    width: 920px;
-    height: 320px;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.eventTitle{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    text-align: center;
+}
+
+.eventTitle h1{
+    font-weight: 700;
+    letter-spacing: 20px;
+    font-size: 70px;
+}
+
+.eventTitle h2{
+    letter-spacing: 5px;
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+.code{
+    grid-column: 7/8;
+    grid-row: 1/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoDate{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.infoExtra{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.infoPrice{
+    grid-column: 3/3;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.infoFact{
+    grid-column: 1/5;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
