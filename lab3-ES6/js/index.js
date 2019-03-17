@@ -8,17 +8,17 @@ class Note {
   createElement(title){
     this.title = title;
     let newNote = document.createElement('div');
-    newNote.innerHTML = `<p>${this.title}</p>`+`<a href="#" class="card-remove">Remove</a>`;
+    const card = `<p>${this.title}</p>`+`<a href="#" class="card-remove">Remove</a>`;
+    newNote.innerHTML += card; 
     newNote.className = "card";
     
     // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
-    new Promise((resolve, reject) =>{
-      setTimeout(() =>{
-        let a = document.getElementsByTagName('a');
-        a[i].addEventListener('click', this.remove.bind(newNote));
-        i++;
-      }, 1000);
+     setTimeout( () => {
+       let a = document.getElementsByTagName('a');
+       a[i].addEventListener('click', this.remove.bind(newNote));
+       i++;
     });
+    
     return newNote;
   }
   
@@ -32,14 +32,23 @@ class Note {
     // HINT🤩
     // localStorage only supports strings, not arrays
     // if you want to store arrays, look at JSON.parse and JSON.stringify
+    
+    let storedNotes = JSON.parse(localStorage.getItem("notes"));
+    if (storedNotes == null){
+        storedNotes = [];
+      }
+     storedNotes.push(this.title);
+     localStorage.setItem("notes", JSON.stringify(storedNotes));
   }
   
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
     console.log("remove me");
+    localStorage.removeItem("notes");
     let remove = this;
     remove.style.display = "none";
+    
   } 
 }
 
@@ -49,15 +58,21 @@ class App {
     // HINT🤩
     // clicking the button should work
     
-    this.btnAdd = document.querySelector("#btnAddNote");
-    this.btnAdd.addEventListener("click", this.createNote.bind(this));
+    this.btnAddTxt = document.querySelector("#btnAddNote");
+    this.btnAddTxt.addEventListener("click", this.createNote.bind(this));
+    this.txtAdd = document.querySelector('#txtAddNote');
     
     // pressing the enter key should also work
     
-    
+    this.txtAdd.addEventListener("keydown", event => {
+      if(event.keyCode === 13){
+        this.createNote();
+      }
+    });
     
     // this.loadNotesFromStorage();
     
+    this.loadNotesFromStorage();
     
   }
   
@@ -65,6 +80,14 @@ class App {
     // HINT🤩
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
+    
+    let getNotes = JSON.parse(localStorage.getItem("notes"));
+      if (getNotes != null){
+        getNotes.forEach(element => {
+          let note = new Note(element);
+          note.add();
+        });
+      }
   }
    
   createNote(e){
