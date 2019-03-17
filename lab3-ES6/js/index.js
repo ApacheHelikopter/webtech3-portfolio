@@ -12,7 +12,13 @@ class Note {
     newNote.className = "card";
     
     // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
-    
+    new Promise((resolve, reject) =>{
+      setTimeout(() =>{
+        let a = document.getElementsByTagName('a');
+        a[i].addEventListener('click', this.remove.bind(newNote));
+        i++;
+      }, 1000);
+    });
     return newNote;
   }
   
@@ -31,6 +37,9 @@ class Note {
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
+    console.log("remove me");
+    let remove = this;
+    remove.style.display = "none";
   } 
 }
 
@@ -89,4 +98,5 @@ class App {
   
 }
 
+let i =0;
 let app = new App();
