@@ -1,5 +1,7 @@
 # Portfolio Web Tech 3 - Ruben Pieters
 
+![apache](https://user-images.githubusercontent.com/47883752/54644378-69621c80-4a99-11e9-8512-f13fe6f377d8.gif)
+
 ### Lab 1
 
 [Link to Lab 1 - Git](https://github.com/ApacheHelikopter/2imd-webtech3-lab1.git)
