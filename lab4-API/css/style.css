@@ -1,0 +1,62 @@
+
+
+body{
+    background-image: url(https://i.redd.it/n7jbg46816m21.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 150px;
+}
+
+h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    padding-top: 100px;
+}
+
+h2{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.weatherApp{
+
+    color: white;
+    background: rgba(255, 183, 0, 0.596);
+    width: 600px;
+    height: 700px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.content{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.extraInfo{
+
+    color: white;
+    background: rgba(255, 94, 0, 0.596);
+    width: 600px;
+    height: 160px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.hidden{
+    display: none;
+}
+
+.content p{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
