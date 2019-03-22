@@ -1,4 +1,4 @@
-### Link to CodePen ES6 ToDo App
+### Link to CodePen Weather - ISS App
 
 [CodePen Weather + ISS App](https://codepen.io/RubenPieters/pen/MxzGdr?editors=1010)
 
