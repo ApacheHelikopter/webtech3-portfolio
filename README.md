@@ -17,3 +17,7 @@
 ### Lab 3
 
 [Link to Lab 3 - ES6](https://github.com/ApacheHelikopter/2imd-webtech3-portfolio/tree/master/lab3-ES6)
+
+### Lab 4
+
+[Link to Lab 4 - App Prototype - API's](https://github.com/ApacheHelikopter/2imd-webtech3-portfolio/tree/master/lab4-API)
