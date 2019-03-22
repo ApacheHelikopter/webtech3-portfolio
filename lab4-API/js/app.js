@@ -36,7 +36,7 @@ class Weather {
 
             let cloudCover = json.currently.cloudCover;
             let hiddenTime = document.querySelector(".hidden");
-            if(cloudCover<0.5){
+            if(cloudCover>0.5){
                 hiddenTime.className = "extraInfo";
             }
         });
