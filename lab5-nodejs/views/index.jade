@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(method='POST' action='')
+          div.form-group
+            label(for='message') Message:
+            input#name.form-control(type='text', placeholder='Type here...' name='message')
+            button.btn.btn-primary(type='submit') Send
