@@ -23,4 +23,7 @@ router.put('/api/v1/messages/:id', messageController.put);
 /* DELETE: /api/v1/messages/:id */
 router.delete('/api/v1/messages/:id', messageController.del);
 
+/* GET: /api/v1/messages?user=username */
+router.get('/api/v1/messages' , messageController.get);
+
 module.exports = router;
