@@ -21,3 +21,7 @@
 ### Lab 4
 
 [Link to Lab 4 - App Prototype - API's](https://github.com/ApacheHelikopter/2imd-webtech3-portfolio/tree/master/lab4-API)
+
+### Lab 5
+
+[Link to Lab 5 - NodeJS Basics](https://github.com/ApacheHelikopter/2imd-webtech3-portfolio/tree/master/lab5-nodejs)
